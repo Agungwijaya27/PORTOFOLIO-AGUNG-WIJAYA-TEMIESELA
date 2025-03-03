@@ -3,25 +3,32 @@ const slides = document.querySelectorAll(".slide");
 const prevButton = document.querySelector(".prev");
 const nextButton = document.querySelector(".next");
 
-function changeSlide(n) {
-    slides[slideIndex].classList.remove("active");
-    slideIndex = (slideIndex + n + slides.length) % slides.length;
-    slides[slideIndex].classList.add("active");
+// Fungsi untuk menampilkan slide yang benar
+function showSlide(index) {
+    // Sembunyikan semua slide
+    slides.forEach(slide => slide.style.display = "none");
 
-    // Sembunyikan tombol "Prev" jika di slide pertama
-    if (slideIndex === 0) {
-        prevButton.style.display = "none";
-    } else {
-        prevButton.style.display = "block";
-    }
+    // Tampilkan slide yang sedang aktif
+    slides[index].style.display = "block";
 
-    // Sembunyikan tombol "Next" jika di slide terakhir
-    if (slideIndex === slides.length - 1) {
-        nextButton.style.display = "none";
-    } else {
-        nextButton.style.display = "block";
-    }
+    // Atur visibilitas tombol prev & next
+    prevButton.style.display = (index === 0) ? "none" : "block";
+    nextButton.style.display = (index === slides.length - 1) ? "none" : "block";
 }
 
-// Panggil fungsi sekali untuk memastikan tombol awal diatur dengan benar
-changeSlide(0);
+// Fungsi untuk mengganti slide
+function changeSlide(n) {
+    slideIndex += n;
+
+    // Pastikan indeks tetap dalam batas
+    if (slideIndex < 0) {
+        slideIndex = 0;
+    } else if (slideIndex >= slides.length) {
+        slideIndex = slides.length - 1;
+    }
+
+    showSlide(slideIndex);
+}
+
+// Panggil showSlide untuk menampilkan slide pertama saat halaman dimuat
+showSlide(slideIndex);
