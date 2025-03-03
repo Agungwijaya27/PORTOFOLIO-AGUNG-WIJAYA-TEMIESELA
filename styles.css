@@ -94,4 +94,52 @@ footer {
     height: 100%;
     object-fit: cover; /* Menjaga proporsi tanpa merusak bentuk */
 }
+.slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    display: none;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.slide.active {
+    display: block; /* Hanya slide aktif yang tampil */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    padding: 10px;
+    background-color: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
 
