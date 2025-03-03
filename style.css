@@ -1,0 +1,87 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #0077b6;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+section {
+    padding: 30px;
+    margin: 30px auto;
+    width: 80%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project, .job {
+    border: none;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.project:hover, .job:hover {
+    transform: scale(1.05);
+}
+
+a {
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #00b4d8;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0077b6;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #00b4d8;
+}
+
+footer {
+    background-color: #0077b6;
+    color: white;
+    padding: 15px;
+    font-size: 0.9em;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+}
+.profile-pic {
+    width: 150px; /* Ukuran foto */
+    height: 150px;
+    border-radius: 50%; /* Membuat gambar bulat */
+    object-fit: cover;
+    border: 3px solid white;
+    margin-top: 10px;
+}
