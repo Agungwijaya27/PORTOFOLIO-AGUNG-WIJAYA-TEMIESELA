@@ -13,18 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
         slides.forEach(slide => slide.style.display = "none");
         slides[index].style.display = "block";
 
-        // Cek apakah tombol Prev bisa muncul
-        console.log("Index slide:", index);
-        console.log("Prev button sebelum diubah:", prevButton.style.visibility);
-
         if (index === 0) {
             prevButton.style.visibility = "hidden"; 
         } else {
             prevButton.style.visibility = "visible"; 
         }
-
-        // Cek apakah tombol Prev sudah benar diubah
-        console.log("Prev button setelah diubah:", prevButton.style.visibility);
 
         // Sembunyikan tombol Next jika di slide terakhir
         if (index === slides.length - 1) {
