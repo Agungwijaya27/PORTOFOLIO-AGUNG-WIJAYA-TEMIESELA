@@ -26,7 +26,12 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             nextButton.style.display = "block";
         }
+    
+        // Debugging: Print status tombol Next ke Console
+        console.log("Slide Index:", index);
+        console.log("Next Button Display:", nextButton.style.display);
     }
+    
     
     
 
