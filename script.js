@@ -14,11 +14,20 @@ document.addEventListener("DOMContentLoaded", function () {
         slides[index].style.display = "block";
     
         // Sembunyikan tombol Prev jika di slide pertama
-        prevButton.style.visibility = index === 0 ? "hidden" : "visible";
+        if (index === 0) {
+            prevButton.style.display = "none";
+        } else {
+            prevButton.style.display = "block";
+        }
     
         // Sembunyikan tombol Next jika di slide terakhir
-        nextButton.style.visibility = index === slides.length - 1 ? "hidden" : "visible";
+        if (index === slides.length - 1) {
+            nextButton.style.display = "none";
+        } else {
+            nextButton.style.display = "block";
+        }
     }
+    
     
 
     function changeSlide(n) {
