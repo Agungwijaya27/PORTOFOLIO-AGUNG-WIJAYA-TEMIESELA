@@ -1,24 +1,32 @@
+console.log("Memeriksa tombol Prev:", document.querySelector(".prev"));
 document.addEventListener("DOMContentLoaded", function () {
     let slideIndex = 0;
     const slides = document.querySelectorAll(".slide");
     const prevButton = document.querySelector(".prev");
     const nextButton = document.querySelector(".next");
 
-    // Pastikan elemen slide ditemukan sebelum menjalankan kode
-    if (slides.length === 0) {
-        console.error("Tidak ada elemen dengan class 'slide'. Pastikan HTML sudah benar.");
+    if (!prevButton || !nextButton) {
+        console.error("Tombol Prev atau Next tidak ditemukan di HTML.");
         return;
     }
 
     function showSlide(index) {
         slides.forEach(slide => slide.style.display = "none");
-        if (slides[index]) {
-            slides[index].style.display = "block";
+        slides[index].style.display = "block";
+
+        // Pastikan tombol Prev hanya tersembunyi di slide pertama
+        if (index === 0) {
+            prevButton.style.visibility = "hidden"; 
+        } else {
+            prevButton.style.visibility = "visible"; 
         }
 
-        // Sembunyikan tombol Prev jika di slide pertama
-        prevButton.style.display = index === 0 ? "none" : "block";
-        nextButton.style.display = index === slides.length - 1 ? "none" : "block";
+        // Sembunyikan tombol Next jika di slide terakhir
+        if (index === slides.length - 1) {
+            nextButton.style.display = "none";
+        } else {
+            nextButton.style.display = "block";
+        }
     }
 
     function changeSlide(n) {
@@ -34,6 +42,5 @@ document.addEventListener("DOMContentLoaded", function () {
         changeSlide(1);
     });
 
-    // Tampilkan slide pertama saat halaman dimuat
     showSlide(slideIndex);
 });
