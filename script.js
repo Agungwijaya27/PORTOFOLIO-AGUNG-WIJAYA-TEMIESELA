@@ -20,10 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // Pastikan tombol Next hanya tersembunyi di slide terakhir
         nextButton.style.display = (index === slides.length - 1) ? "none" : "inline-block";
 
-        // Debugging tambahan
-        console.log("Slide Index:", index);
-        console.log("Prev Button Display:", prevButton.style.display);
-        console.log("Next Button Display:", nextButton.style.display);
     }
 
     function changeSlide(n) {
