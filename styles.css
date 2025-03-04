@@ -123,7 +123,6 @@ footer {
 }
 
 .prev, .next {
-    display: block !important;
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -139,13 +138,14 @@ footer {
 
 .prev {
     left: 10px;
-    visibility: hidden; /* Sembunyikan saat pertama, tapi bisa dimunculkan */
 }
 
 .next {
     right: 10px;
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(0, 119, 182, 1);
+/* Pastikan tombol benar-benar hilang saat disembunyikan oleh JS */
+.prev[style="display: none;"],
+.next[style="display: none;"] {
+    display: none !important;
 }

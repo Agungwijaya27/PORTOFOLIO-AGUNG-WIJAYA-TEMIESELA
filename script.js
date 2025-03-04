@@ -4,49 +4,30 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.querySelector(".prev");
     const nextButton = document.querySelector(".next");
 
-    if (!prevButton || !nextButton) {
-        console.error("Tombol Prev atau Next tidak ditemukan di HTML.");
+    if (!prevButton || !nextButton || slides.length === 0) {
+        console.error("Tombol atau slide tidak ditemukan di HTML.");
         return;
     }
 
     function showSlide(index) {
-        slides.forEach(slide => slide.style.display = "none");
-        slides[index].style.display = "block";
-    
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? "block" : "none";
+        });
+
         // Sembunyikan tombol Prev jika di slide pertama
-        if (index === 0) {
-            prevButton.style.display = "none";
-        } else {
-            prevButton.style.display = "block";
-        }
-    
+        prevButton.style.display = index === 0 ? "none" : "block";
+
         // Sembunyikan tombol Next jika di slide terakhir
-        if (index === slides.length - 1) {
-            nextButton.style.display = "none";
-        } else {
-            nextButton.style.display = "block";
-        }
-    
-        // Debugging: Print status tombol Next ke Console
-        console.log("Slide Index:", index);
-        console.log("Next Button Display:", nextButton.style.display);
+        nextButton.style.display = index === slides.length - 1 ? "none" : "block";
     }
-    
-    
-    
 
     function changeSlide(n) {
-        slideIndex = Math.min(Math.max(slideIndex + n, 0), slides.length - 1);
+        slideIndex = Math.max(0, Math.min(slideIndex + n, slides.length - 1));
         showSlide(slideIndex);
     }
 
-    prevButton.addEventListener("click", function () {
-        changeSlide(-1);
-    });
+    prevButton.addEventListener("click", () => changeSlide(-1));
+    nextButton.addEventListener("click", () => changeSlide(1));
 
-    nextButton.addEventListener("click", function () {
-        changeSlide(1);
-    });
-
-    showSlide(slideIndex);
+    showSlide(slideIndex); // Tampilkan slide pertama saat halaman dimuat
 });
