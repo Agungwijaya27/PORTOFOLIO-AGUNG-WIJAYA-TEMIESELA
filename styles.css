@@ -123,23 +123,31 @@ footer {
 }
 
 .prev, .next {
+    display: block !important; /* Pastikan tombol selalu terlihat */
     cursor: pointer;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    font-size: 20px;
-    padding: 10px;
-    background-color: #0077b6;
+    font-size: 24px;
+    padding: 10px 15px;
+    background-color: rgba(0, 119, 182, 0.8);
     color: white;
     border: none;
     border-radius: 5px;
+    z-index: 1000;
 }
 
 .prev {
-    left: 0;
+    left: 10px;
+    visibility: hidden; /* Sembunyikan saat pertama, tapi bisa dimunculkan */
 }
 
 .next {
-    right: 0;
+    right: 10px;
 }
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 119, 182, 1);
+}
+
 
