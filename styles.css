@@ -237,21 +237,25 @@ footer {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    height: 60vh; /* Kurangi tinggi section agar tidak terlalu besar */
-    padding: 0 5%; /* Kurangi margin kiri */
+    height: 50vh; /* Sesuaikan tinggi agar lebih proporsional */
+    padding: 20px 5%; /* Tambahkan padding agar tidak terlalu mepet */
 }
-
-
 
 .home-container {
     display: flex;
     align-items: center;
-    gap: 15px; /* Kurangi jarak antara foto dan teks */
+    gap: 30px; /* Jarak antara foto dan teks */
 }
 
+.home-container img {
+    width: 180px; /* Sesuaikan ukuran foto */
+    height: 180px;
+    object-fit: cover; /* Pastikan foto tidak terpotong */
+    border-radius: 50%;
+}
 
 .home-text {
-    max-width: 45%; /* Biar teks tetap proporsional */
+    max-width: 50%; /* Batasi lebar teks agar tidak melebar ke kiri */
 }
 
 .home-text h1 {
