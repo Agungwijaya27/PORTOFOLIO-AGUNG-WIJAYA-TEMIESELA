@@ -236,15 +236,21 @@ footer {
 #home {
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    height: 50vh; /* Sesuaikan tinggi agar lebih proporsional */
-    padding: 20px 5%; /* Tambahkan padding agar tidak terlalu mepet */
+    justify-content: space-between; /* Agar foto dan teks merapat ke sisi */
+    height: 40vh; /* Sesuaikan tinggi agar tidak terlalu besar */
+    padding: 20px 8%; /* Tambahkan padding supaya tidak terlalu mepet */
 }
 
 .home-container {
     display: flex;
     align-items: center;
-    gap: 30px; /* Jarak antara foto dan teks */
+    gap: 50px; /* Jarak antara foto dan teks */
+    width: 100%; /* Biarkan elemen memenuhi lebar */
+}
+
+.home-text {
+    flex: 1; /* Teks bisa lebih panjang ke kanan */
+    max-width: 60%; /* Agar lebih lebar */
 }
 
 .home-container img {
@@ -252,10 +258,6 @@ footer {
     height: 180px;
     object-fit: cover; /* Pastikan foto tidak terpotong */
     border-radius: 50%;
-}
-
-.home-text {
-    max-width: 50%; /* Batasi lebar teks agar tidak melebar ke kiri */
 }
 
 .home-text h1 {
