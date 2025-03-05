@@ -235,26 +235,22 @@ footer {
 
 #home {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: left;
-    padding: 50px 20px;
-    max-width: 1100px;
-    margin: auto;
-    height: 100vh; /* Agar bagian home selalu di tengah */
+    justify-content: flex-start; /* Supaya tetap di kiri */
 }
+
 
 .home-container {
     display: flex;
-    align-items: center; /* Pastikan sejajar secara vertikal */
-    justify-content: space-between;
+    align-items: center;
+    justify-content: flex-start; /* Agar foto tetap di kiri */
     width: 80%;
-    flex-direction: row-reverse; /* Foto di kiri, teks di kanan */
+    gap: 30px; /* Menyesuaikan jarak antara foto dan teks */
 }
 
 .home-text {
     max-width: 50%;
     text-align: left;
+    flex-grow: 1; /* Agar teks tetap dekat dengan foto */
 }
 
 .home-text h1 {
