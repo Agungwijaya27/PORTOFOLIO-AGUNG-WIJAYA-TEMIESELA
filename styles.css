@@ -237,9 +237,9 @@ footer {
     display: flex;
     align-items: center; /* Pusatkan vertikal */
     justify-content: center; /* Pusatkan horizontal */
-    height: 45vh; /* Dikurangi supaya tidak terlalu besar */
-    padding: 20px 8%;
-    position: relative;
+    min-height: 350px; /* Sesuaikan tinggi agar proporsional */
+    padding: 40px 8%; /* Padding atas bawah dibuat lebih mirip bagian bawah */
+    background-color: #0a6ebd; /* Warna tetap sesuai */
 }
 
 .home-container {
@@ -247,7 +247,8 @@ footer {
     align-items: center;
     justify-content: center; /* Pusatkan konten */
     gap: 40px; /* Jarak antara teks dan foto */
-    width: 100%; 
+    max-width: 1100px; /* Agar ukuran kotak tidak melebar terlalu jauh */
+    width: 100%;
 }
 
 .home-text {
