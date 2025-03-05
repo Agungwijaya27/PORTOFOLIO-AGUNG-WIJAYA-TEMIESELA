@@ -237,33 +237,26 @@ footer {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Agar foto dan teks merapat ke sisi */
-    height: 40vh; /* Sesuaikan tinggi agar tidak terlalu besar */
-    padding: 20px 8%; /* Tambahkan padding supaya tidak terlalu mepet */
+    height: auto; /* Sesuaikan tinggi otomatis */
+    padding: 40px 8%; /* Tambahkan padding supaya tidak terlalu mepet */
 }
 
 .home-container {
     display: flex;
     align-items: center;
-    gap: 50px; /* Jarak antara foto dan teks */
+    gap: 30px; /* Jarak antara foto dan teks dikurangi agar lebih rapat */
     width: 100%; /* Biarkan elemen memenuhi lebar */
 }
 
 .home-text {
     flex: 1; /* Teks bisa lebih panjang ke kanan */
-    max-width: 60%; /* Agar lebih lebar */
-}
-
-.home-container img {
-    width: 250px; /* Ukuran diperbesar */
-    height: 250px;
-    object-fit: contain; /* Ganti dari cover ke contain agar tidak terpotong */
-    border-radius: 50%;
+    max-width: 65%; /* Agar lebih lebar */
 }
 
 .home-text h1 {
-    font-size: 32px;
+    font-size: 36px;
     color: #fff;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .home-text p {
@@ -278,10 +271,10 @@ footer {
 }
 
 .home-image img {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     border: 4px solid #fff;
-    object-fit: contain; /* Ganti menjadi contain agar gambar tetap proporsional */
+    object-fit: cover; /* Pastikan gambar tetap penuh dan tidak terdistorsi */
     display: block;
 }
