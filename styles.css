@@ -245,18 +245,10 @@ footer {
 
 .home-container {
     display: flex;
-    align-items: center; /* Sejajarkan vertikal */
+    align-items: center; /* Menjaga foto & teks sejajar secara vertikal */
     justify-content: space-between;
     width: 100%;
-}
-
-.home-image img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid #0077b6;
-    object-fit: cover;
-    display: block;
+    flex-direction: row-reverse; /* Membalik posisi: foto di kiri, teks di kanan */
 }
 
 .home-text {
@@ -274,4 +266,14 @@ footer {
     color: #ffffff;
     font-weight: bold;
 }
+
+.home-image img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid #0077b6;
+    object-fit: cover;
+    display: block;
+}
+
 
