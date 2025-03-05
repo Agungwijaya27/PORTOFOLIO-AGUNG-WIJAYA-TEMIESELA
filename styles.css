@@ -235,22 +235,23 @@ footer {
 
 #home {
     display: flex;
-    justify-content: flex-start; /* Supaya tetap di kiri */
+    align-items: center;
+    justify-content: flex-start;
+    height: 60vh; /* Kurangi tinggi section agar tidak terlalu besar */
+    padding: 0 5%; /* Kurangi margin kiri */
 }
+
 
 
 .home-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Agar foto tetap di kiri */
-    width: 80%;
-    gap: 30px; /* Menyesuaikan jarak antara foto dan teks */
+    gap: 15px; /* Kurangi jarak antara foto dan teks */
 }
 
+
 .home-text {
-    max-width: 50%;
-    text-align: left;
-    flex-grow: 1; /* Agar teks tetap dekat dengan foto */
+    max-width: 45%; /* Biar teks tetap proporsional */
 }
 
 .home-text h1 {
