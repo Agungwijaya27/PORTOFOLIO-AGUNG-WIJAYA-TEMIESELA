@@ -189,11 +189,26 @@ footer {
     padding: 0 20px;
 }
 
-.logo {
-    font-size: 22px;
+..logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Ukuran logo */
+    height: 50px;
+    border-radius: 50%; /* Membuat logo bulat */
+    border: 2px solid #0077b6; /* Tambahkan bingkai jika ingin */
+    object-fit: cover;
+    margin-right: 10px; /* Jarak antara logo dan teks */
+}
+
+.logo span {
+    font-size: 20px;
     font-weight: bold;
     color: #0077b6;
 }
+
 
 .nav-links {
     list-style: none;
@@ -245,7 +260,7 @@ footer {
 
 .home-text p {
     font-size: 18px;
-    color: #333;
+    color: #ffffff;
     font-weight: bold;
 }
 
